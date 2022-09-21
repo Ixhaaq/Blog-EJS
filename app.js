@@ -16,6 +16,36 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
+app.get("/", function (req, res) {
+
+  res.render("home", {
+    startingContent: homeStartingContent
+  });
+  
+  });
+
+  app.get("/contact", function (req, res) {
+
+    res.render("contact", {
+      contactPage: contactContent
+    });
+    
+    });
+
+    app.get("/about", function (req, res) {
+
+      res.render("about", {
+        aboutPage: aboutContent
+      });
+      
+      });
+
+
+
+
+
+
+
 
 
 
